@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190926 09:48:34.681" generator="Robot 3.1.2 (Python 2.7.12 on linux2)">
+<suite source="/home/span99/Desktop/ROBOT/sample_code1.robot" id="s1" name="Sample Code1">
+<kw type="setup" name="Suite_setup">
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${su_var}</arg>
+<arg>Hello wolrd</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.867" level="INFO">${su_var} = Hello wolrd</msg>
+<status status="PASS" endtime="20190926 09:48:34.867" starttime="20190926 09:48:34.866"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>log</arg>
+<arg>Hai Opening in the Browser using selenium</arg>
+</arguments>
+<status status="PASS" endtime="20190926 09:48:34.867" starttime="20190926 09:48:34.867"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Hai OPening the SSHConnection</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.867" level="INFO">Hai OPening the SSHConnection</msg>
+<status status="PASS" endtime="20190926 09:48:34.867" starttime="20190926 09:48:34.867"></status>
+</kw>
+<kw name="Open Connection" library="ssh">
+<doc>Opens a new SSH connection to the given ``host`` and ``port``.</doc>
+<arguments>
+<arg>192.168.78.105</arg>
+<arg>timeout=30sec</arg>
+<arg>prompt=$</arg>
+</arguments>
+<status status="PASS" endtime="20190926 09:48:34.868" starttime="20190926 09:48:34.867"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.868" starttime="20190926 09:48:34.866"></status>
+</kw>
+<test id="s1-t1" name="Basic_1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>we are in the basic session</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.868" level="INFO">we are in the basic session</msg>
+<status status="PASS" endtime="20190926 09:48:34.868" starttime="20190926 09:48:34.868"></status>
+</kw>
+<kw name="hi">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>hai</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.869" level="INFO">hai</msg>
+<status status="PASS" endtime="20190926 09:48:34.869" starttime="20190926 09:48:34.869"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.869" starttime="20190926 09:48:34.869"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>12</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.869" level="INFO">${var1} = 12</msg>
+<status status="PASS" endtime="20190926 09:48:34.869" starttime="20190926 09:48:34.869"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${var1}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.870" level="INFO">12</msg>
+<status status="PASS" endtime="20190926 09:48:34.870" starttime="20190926 09:48:34.869"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>${su_var}</arg>
+<arg>set variable</arg>
+<arg>"In the suite"</arg>
+</arguments>
+<status status="PASS" endtime="20190926 09:48:34.870" starttime="20190926 09:48:34.870"></status>
+</kw>
+<kw name="Comment" library="BuiltIn">
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<arguments>
+<arg>log</arg>
+<arg>${su_var}</arg>
+</arguments>
+<status status="PASS" endtime="20190926 09:48:34.870" starttime="20190926 09:48:34.870"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${su_var}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.870" level="INFO">Hello wolrd</msg>
+<status status="PASS" endtime="20190926 09:48:34.870" starttime="20190926 09:48:34.870"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>"Hello wolrd"</arg>
+</arguments>
+<assign>
+<var>${string1}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.871" level="INFO">${string1} = "Hello wolrd"</msg>
+<status status="PASS" endtime="20190926 09:48:34.871" starttime="20190926 09:48:34.871"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${string1}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.871" level="INFO">"Hello wolrd"</msg>
+<status status="PASS" endtime="20190926 09:48:34.871" starttime="20190926 09:48:34.871"></status>
+</kw>
+<kw name="Convert To Lowercase" library="String">
+<doc>Converts string to lowercase.</doc>
+<arguments>
+<arg>${string1}</arg>
+</arguments>
+<assign>
+<var>${string2}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.871" level="INFO">${string2} = "hello wolrd"</msg>
+<status status="PASS" endtime="20190926 09:48:34.871" starttime="20190926 09:48:34.871"></status>
+</kw>
+<kw name="Convert To Uppercase" library="String">
+<doc>Converts string to uppercase.</doc>
+<arguments>
+<arg>${string2}</arg>
+</arguments>
+<assign>
+<var>${string3}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.872" level="INFO">${string3} = "HELLO WOLRD"</msg>
+<status status="PASS" endtime="20190926 09:48:34.872" starttime="20190926 09:48:34.872"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${string3}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.872" level="INFO">"HELLO WOLRD"</msg>
+<status status="PASS" endtime="20190926 09:48:34.872" starttime="20190926 09:48:34.872"></status>
+</kw>
+<kw name="Split String To Characters" library="String">
+<doc>Splits the given ``string`` to characters.</doc>
+<arguments>
+<arg>${string2}</arg>
+</arguments>
+<assign>
+<var>@{string3}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.872" level="INFO">@{string3} = [ " | h | e | l | l | o |   | w | o | l | r | d | " ]</msg>
+<status status="PASS" endtime="20190926 09:48:34.873" starttime="20190926 09:48:34.872"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${string3}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.873" level="INFO">[u'"', u'h', u'e', u'l', u'l', u'o', u' ', u'w', u'o', u'l', u'r', u'd', u'"']</msg>
+<status status="PASS" endtime="20190926 09:48:34.873" starttime="20190926 09:48:34.873"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>45</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+</arguments>
+<assign>
+<var>${list1}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.873" level="INFO">${list1} = [u'45', u'2', u'3', u'4']</msg>
+<status status="PASS" endtime="20190926 09:48:34.873" starttime="20190926 09:48:34.873"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${list1}</arg>
+</arguments>
+<assign>
+<var>${size_of_list}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.873" level="INFO">Length is 4</msg>
+<msg timestamp="20190926 09:48:34.874" level="INFO">${size_of_list} = 4</msg>
+<status status="PASS" endtime="20190926 09:48:34.874" starttime="20190926 09:48:34.873"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${size_of_list}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.874" level="INFO">4</msg>
+<status status="PASS" endtime="20190926 09:48:34.874" starttime="20190926 09:48:34.874"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list1}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.874" level="INFO">[u'45', u'2', u'3', u'4']</msg>
+<status status="PASS" endtime="20190926 09:48:34.874" starttime="20190926 09:48:34.874"></status>
+</kw>
+<kw name="Append To List" library="Collections">
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<arguments>
+<arg>${list1}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20190926 09:48:34.875" starttime="20190926 09:48:34.874"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${list1}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.875" level="INFO">[u'45', u'2', u'3', u'4', u'5']</msg>
+<status status="PASS" endtime="20190926 09:48:34.875" starttime="20190926 09:48:34.875"></status>
+</kw>
+<kw name="Get From List" library="Collections">
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<arguments>
+<arg>${list1}</arg>
+<arg>0</arg>
+</arguments>
+<assign>
+<var>${val_form_list}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.875" level="INFO">${val_form_list} = 45</msg>
+<status status="PASS" endtime="20190926 09:48:34.875" starttime="20190926 09:48:34.875"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${val_form_list}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.876" level="INFO">45</msg>
+<status status="PASS" endtime="20190926 09:48:34.876" starttime="20190926 09:48:34.875"></status>
+</kw>
+<kw name="Log List" library="Collections">
+<doc>Logs the length and contents of the ``list`` using given ``level``.</doc>
+<arguments>
+<arg>${list1}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.876" level="INFO">List length is 5 and it contains following items:
+0: 45
+1: 2
+2: 3
+3: 4
+4: 5</msg>
+<status status="PASS" endtime="20190926 09:48:34.876" starttime="20190926 09:48:34.876"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>name=shankar</arg>
+<arg>age=25</arg>
+</arguments>
+<assign>
+<var>${dict}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.877" level="INFO">${dict} = {u'name': u'shankar', u'age': u'25'}</msg>
+<status status="PASS" endtime="20190926 09:48:34.877" starttime="20190926 09:48:34.876"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.877" level="INFO">{u'name': u'shankar', u'age': u'25'}</msg>
+<status status="PASS" endtime="20190926 09:48:34.877" starttime="20190926 09:48:34.877"></status>
+</kw>
+<kw name="Get Dictionary Keys" library="Collections">
+<doc>Returns keys of the given ``dictionary`` as a list.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<assign>
+<var>${keys}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.878" level="INFO">${keys} = [u'age', u'name']</msg>
+<status status="PASS" endtime="20190926 09:48:34.878" starttime="20190926 09:48:34.878"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${keys}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.878" level="INFO">[u'age', u'name']</msg>
+<status status="PASS" endtime="20190926 09:48:34.878" starttime="20190926 09:48:34.878"></status>
+</kw>
+<kw name="Get Dictionary Values" library="Collections">
+<doc>Returns values of the given ``dictionary`` as a list.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<assign>
+<var>${vals}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.878" level="INFO">${vals} = [u'25', u'shankar']</msg>
+<status status="PASS" endtime="20190926 09:48:34.879" starttime="20190926 09:48:34.878"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${vals}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.879" level="INFO">[u'25', u'shankar']</msg>
+<status status="PASS" endtime="20190926 09:48:34.880" starttime="20190926 09:48:34.879"></status>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<arguments>
+<arg>${dict}</arg>
+<arg>dob=07/05/1992</arg>
+</arguments>
+<status status="PASS" endtime="20190926 09:48:34.881" starttime="20190926 09:48:34.880"></status>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<arguments>
+<arg>${dict}</arg>
+<arg>dob=07/05/1992</arg>
+</arguments>
+<status status="PASS" endtime="20190926 09:48:34.881" starttime="20190926 09:48:34.881"></status>
+</kw>
+<kw name="Log Dictionary" library="Collections">
+<doc>Logs the size and contents of the ``dictionary`` using given ``level``.</doc>
+<arguments>
+<arg>${dict}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.881" level="INFO">Dictionary size is 3 and it contains following items:
+age: 25
+dob: 07/05/1992
+name: shankar</msg>
+<status status="PASS" endtime="20190926 09:48:34.881" starttime="20190926 09:48:34.881"></status>
+</kw>
+<kw type="for" name="${i} IN [ @{list1} ]">
+<kw type="foritem" name="${i} = 45">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.882" level="INFO">45</msg>
+<status status="PASS" endtime="20190926 09:48:34.882" starttime="20190926 09:48:34.882"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.882" starttime="20190926 09:48:34.882"></status>
+</kw>
+<kw type="foritem" name="${i} = 2">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.882" level="INFO">2</msg>
+<status status="PASS" endtime="20190926 09:48:34.882" starttime="20190926 09:48:34.882"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.882" starttime="20190926 09:48:34.882"></status>
+</kw>
+<kw type="foritem" name="${i} = 3">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.883" level="INFO">3</msg>
+<status status="PASS" endtime="20190926 09:48:34.883" starttime="20190926 09:48:34.883"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.883" starttime="20190926 09:48:34.882"></status>
+</kw>
+<kw type="foritem" name="${i} = 4">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.883" level="INFO">4</msg>
+<status status="PASS" endtime="20190926 09:48:34.883" starttime="20190926 09:48:34.883"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.883" starttime="20190926 09:48:34.883"></status>
+</kw>
+<kw type="foritem" name="${i} = 5">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${i}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.884" level="INFO">5</msg>
+<status status="PASS" endtime="20190926 09:48:34.884" starttime="20190926 09:48:34.883"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.884" starttime="20190926 09:48:34.883"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.884" starttime="20190926 09:48:34.881"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${var2}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.884" level="INFO">${var2} = 20</msg>
+<status status="PASS" endtime="20190926 09:48:34.884" starttime="20190926 09:48:34.884"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${var1}</var>
+</assign>
+<msg timestamp="20190926 09:48:34.884" level="INFO">${var1} = 20</msg>
+<status status="PASS" endtime="20190926 09:48:34.884" starttime="20190926 09:48:34.884"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${var1}==${var2}</arg>
+<arg>log</arg>
+<arg>pass</arg>
+<arg>ELSE</arg>
+<arg>FAIL</arg>
+</arguments>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>pass</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.885" level="INFO">pass</msg>
+<status status="PASS" endtime="20190926 09:48:34.885" starttime="20190926 09:48:34.885"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:34.885" starttime="20190926 09:48:34.885"></status>
+</kw>
+<tags>
+<tag>exec</tag>
+</tags>
+<status status="PASS" endtime="20190926 09:48:34.885" critical="yes" starttime="20190926 09:48:34.868"></status>
+</test>
+<test id="s1-t2" name="Test_case_SSHlibrary">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>We are in the SSHLibrary test case</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.886" level="INFO">We are in the SSHLibrary test case</msg>
+<status status="PASS" endtime="20190926 09:48:34.886" starttime="20190926 09:48:34.886"></status>
+</kw>
+<kw name="Login" library="ssh">
+<doc>Logs into the SSH server with the given ``username`` and ``password``.</doc>
+<arguments>
+<arg>server</arg>
+<arg>spanidea</arg>
+</arguments>
+<msg timestamp="20190926 09:48:34.886" level="INFO">Logging into '192.168.78.105:22' as 'server'.</msg>
+<msg timestamp="20190926 09:48:36.236" level="INFO">Read output: Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-62-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Sep 26 04:18:35 UTC 2019
+
+  System load:                    0.0
+  Usage of /:                     29.1% of 60.64GB
+  Memory usage:                   14%
+  Swap usage:                     0%
+  Processes:                      159
+  Users logged in:                0
+  IP address for enp0s3:          192.168.78.105
+  IP address for br-3aa67ad91cd5: 172.18.0.1
+  IP address for docker0:         172.17.0.1
+  IP address for br-f4d0c3815e38: 172.19.0.1
+
+ * Congrats to the Kubernetes community on 1.16 beta 1! Now available
+   in MicroK8s for evaluation and testing, with upgrades to RC and GA
+
+     snap info microk8s
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https://ubuntu.com/livepatch
+
+47 packages can be updated.
+0 updates are security updates.
+
+
+*** System restart required ***
+Last login: Wed Sep 25 10:18:24 2019 from 192.168.78.152
+server@apitesting:~$</msg>
+<status status="PASS" endtime="20190926 09:48:36.236" starttime="20190926 09:48:34.886"></status>
+</kw>
+<kw name="Write" library="ssh">
+<doc>Writes the given ``text`` on the remote machine and appends a newline.</doc>
+<arguments>
+<arg>ls</arg>
+</arguments>
+<msg timestamp="20190926 09:48:36.238" level="INFO">ls</msg>
+<status status="PASS" endtime="20190926 09:48:36.238" starttime="20190926 09:48:36.237"></status>
+</kw>
+<kw name="Read Until Prompt" library="ssh">
+<doc>Consumes and returns the server output until the prompt is found.</doc>
+<assign>
+<var>${op1}</var>
+</assign>
+<msg timestamp="20190926 09:48:36.246" level="INFO">[0m[01;32ma.out[0m                [01;34mdata[0m                     [01;34mRPiTools[0m
+[01;34mazure-iot[0m            databackup-10052019.sql  [01;34msample-fw[0m
+[01;34mazure-iot_copy[0m       [01;34mDeviceManagement[0m         [01;34mSHANKAR[0m
+[01;34mazure-iot-sdk-c[0m      [01;34mfile_copy[0m                [01;34mSpanParking[0m
+[01;34mazure-iot-sdk-c-nam[0m  [01;34mopenssl-1.0.1g[0m           test.cpp
+[01;31mazure-iot.tgz[0m        [01;31mopenssl-1.0.1g.tar.gz[0m    [01;34mzlib-1.2.9[0m
+[01;34mcompose[0m              [01;34mraspi-azure-app[0m          [01;31mzlib-1.2.9.tar.gz[0m
+server@apitesting:~$</msg>
+<msg timestamp="20190926 09:48:36.246" level="INFO">${op1} = [0m[01;32ma.out[0m                [01;34mdata[0m                     [01;34mRPiTools[0m
+[01;34mazure-iot[0m            databackup-10052019.sql  [01;34msample-fw[0m
+[01;34mazure-iot_copy...</msg>
+<status status="PASS" endtime="20190926 09:48:36.246" starttime="20190926 09:48:36.239"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${op1}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:36.246" level="INFO">[0m[01;32ma.out[0m                [01;34mdata[0m                     [01;34mRPiTools[0m
+[01;34mazure-iot[0m            databackup-10052019.sql  [01;34msample-fw[0m
+[01;34mazure-iot_copy[0m       [01;34mDeviceManagement[0m         [01;34mSHANKAR[0m
+[01;34mazure-iot-sdk-c[0m      [01;34mfile_copy[0m                [01;34mSpanParking[0m
+[01;34mazure-iot-sdk-c-nam[0m  [01;34mopenssl-1.0.1g[0m           test.cpp
+[01;31mazure-iot.tgz[0m        [01;31mopenssl-1.0.1g.tar.gz[0m    [01;34mzlib-1.2.9[0m
+[01;34mcompose[0m              [01;34mraspi-azure-app[0m          [01;31mzlib-1.2.9.tar.gz[0m
+server@apitesting:~$</msg>
+<status status="PASS" endtime="20190926 09:48:36.246" starttime="20190926 09:48:36.246"></status>
+</kw>
+<kw name="Execute Command" library="ssh">
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<arguments>
+<arg>pwd</arg>
+</arguments>
+<assign>
+<var>${op2}</var>
+</assign>
+<msg timestamp="20190926 09:48:36.247" level="INFO">Executing command 'pwd'.</msg>
+<msg timestamp="20190926 09:48:36.264" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20190926 09:48:36.264" level="INFO">${op2} = /home/server</msg>
+<status status="PASS" endtime="20190926 09:48:36.264" starttime="20190926 09:48:36.246"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${op2}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:36.266" level="INFO">/home/server</msg>
+<status status="PASS" endtime="20190926 09:48:36.266" starttime="20190926 09:48:36.265"></status>
+</kw>
+<kw name="Execute Command" library="ssh">
+<doc>Executes ``command`` on the remote machine and returns its outputs.</doc>
+<arguments>
+<arg>ls -lrth</arg>
+</arguments>
+<assign>
+<var>${op3}</var>
+</assign>
+<msg timestamp="20190926 09:48:36.268" level="INFO">Executing command 'ls -lrth'.</msg>
+<msg timestamp="20190926 09:48:36.315" level="INFO">Command exited with return code 0.</msg>
+<msg timestamp="20190926 09:48:36.316" level="INFO">${op3} = total 198M
+-rw-r--r--  1 root   root    4.4M Apr  7  2014 openssl-1.0.1g.tar.gz
+-rw-r--r--  1 server server   44K May 10 07:27 databackup-10052019.sql
+drwxr-xr-x  6 root   root    4.0K May 16 09:20 Sp...</msg>
+<status status="PASS" endtime="20190926 09:48:36.316" starttime="20190926 09:48:36.267"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${op3}</arg>
+</arguments>
+<msg timestamp="20190926 09:48:36.318" level="INFO">total 198M
+-rw-r--r--  1 root   root    4.4M Apr  7  2014 openssl-1.0.1g.tar.gz
+-rw-r--r--  1 server server   44K May 10 07:27 databackup-10052019.sql
+drwxr-xr-x  6 root   root    4.0K May 16 09:20 SpanParking
+drwxr-xr-x  3 root   root    4.0K May 16 09:57 data
+drwxr-xr-x  3 server root    4.0K Jun 13 05:21 RPiTools
+drwxr-xr-x 22 root   root    4.0K Jun 27 09:22 openssl-1.0.1g
+-rw-r--r--  1 root   root     244 Jul  8 06:46 test.cpp
+-rwxr-xr-x  1 root   root     14K Jul  8 06:46 a.out
+drwxrwxr-x  3 server server  4.0K Jul 18 06:11 SHANKAR
+drwxr-xr-x  2 server root    4.0K Jul 24 12:06 DeviceManagement
+drwxr-xr-x 23 root   root    4.0K Jul 31 10:20 azure-iot-sdk-c-nam
+drwxr-xr-x 23 server root    4.0K Aug  5 05:29 azure-iot-sdk-c
+-rw-r--r--  1 server server  594K Aug  5 05:37 zlib-1.2.9.tar.gz
+drwxr-xr-x 14    501 staff   4.0K Aug  5 05:40 zlib-1.2.9
+-rw-rw-r--  1 server server  193M Aug 14 12:05 azure-iot.tgz
+drwxr-xr-x 15 server server  4.0K Aug 22 11:15 compose
+drwxr-xr-x  4 root   root    4.0K Aug 28 07:40 azure-iot_copy
+drwxrwxr-x  5 server lpadmin 4.0K Sep 12 11:43 azure-iot
+drwxr-xr-x  4 server root    4.0K Sep 19 05:20 sample-fw
+drwxrwxr-x  2 server server  4.0K Sep 20 10:40 file_copy
+drwxr-xr-x  4 root   root    4.0K Sep 23 05:48 raspi-azure-app</msg>
+<status status="PASS" endtime="20190926 09:48:36.318" starttime="20190926 09:48:36.317"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:36.319" critical="yes" starttime="20190926 09:48:34.886"></status>
+</test>
+<kw type="teardown" name="Suite_teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Closing the web browswers used in selenium</arg>
+</arguments>
+<msg timestamp="20190926 09:48:36.322" level="INFO">Closing the web browswers used in selenium</msg>
+<status status="PASS" endtime="20190926 09:48:36.323" starttime="20190926 09:48:36.322"></status>
+</kw>
+<kw name="Close Browser" library="se">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190926 09:48:36.324" starttime="20190926 09:48:36.323"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>closing all the SSH Connections</arg>
+</arguments>
+<msg timestamp="20190926 09:48:36.325" level="INFO">closing all the SSH Connections</msg>
+<status status="PASS" endtime="20190926 09:48:36.325" starttime="20190926 09:48:36.324"></status>
+</kw>
+<kw name="Close All Connections" library="ssh">
+<doc>Closes all open connections.</doc>
+<status status="PASS" endtime="20190926 09:48:36.392" starttime="20190926 09:48:36.325"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:36.392" starttime="20190926 09:48:36.321"></status>
+</kw>
+<status status="PASS" endtime="20190926 09:48:36.392" starttime="20190926 09:48:34.682"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">exec</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Sample Code1" pass="2">Sample Code1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
